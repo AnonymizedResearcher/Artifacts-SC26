@@ -153,7 +153,7 @@ where:
 ### [Python Preliminary Experiments](python-pre-experiments) [](#python-preliminary-experiments)
 Contains the material of our preliminary experiments with GIL-free and GIL-bound Python v3.14 with Pi-Approximation algorithm.
 - [`Experiments`](python-pre-experiments/pi_experiments.sh)  
-    * The script to run the experiments with and without profiling. All experimental configurations are in the script, but the actual execution requires building the GIL-free and GIL-bound Python Singularity image first (see below).
+    * The script to run the experiments with and without profiling. All experimental configurations are in the script, but the actual execution requires building the GIL-free and GIL-bound Python Singularity images first (see below).
     * Using [pi_slurm.job](python-pre-experiments/pi_slurm.job) as template for the `sbatch` script to run the experiments on Vega.
     * Running the actual experiment script [pi.py](python-pre-experiments/pi.py) requires building the GIL-free and  Python Singularity image first (see below).
 - [`Results-Py`](python-pre-experiments/results-py)  
