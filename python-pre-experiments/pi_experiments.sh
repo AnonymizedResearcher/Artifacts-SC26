@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script runs a series of experiments to estimate the value of Pi using different methods.
 
-## script to run GCsnap cluster
+## script to run
 path=../python-pre-experiments/
 base_res_path=${path}results-py/
 slurm_log_path=${base_res_path}slurm-logs/
@@ -14,27 +14,27 @@ mkdir -p "$slurm_log_path"
 # building a scoreP working with the container was not possbile as missmatch between host's openmpi and container's gompi
 # and building scoreP inside the container was not possible due to missing build tools and libraries	
 combos=( 	
-	# "seq py314t seq none"
+	"seq py314t seq none"
 	"mp-threads py314t python viztracer"
-	# "mp-map py314t python viztracer"
-	# "mp-imap py314t python viztracer"
-	# "mp-imap-unordered py314t python viztracer"  
-	# "omp4py-static py314t omp none"
-	# "omp4py-dynamic py314t omp none"
-	# "omp4py-guided py314t omp none"
-	# "mpi4py py314t mpi none"
+	"mp-map py314t python viztracer"
+	"mp-imap py314t python viztracer"
+	"mp-imap-unordered py314t python viztracer"  
+	"omp4py-static py314t omp none"
+	"omp4py-dynamic py314t omp none"
+	"omp4py-guided py314t omp none"
+	"mpi4py py314t mpi none"
 	"numpy py314t python viztracer"
-	# "seq py314 seq none"
+	"seq py314 seq none"
 	"mp-threads py314 python viztracer"
-	# "mp-map py314 python viztracer"
-	# "mp-imap py314 python viztracer"
-	# "mp-imap-unordered py314 python viztracer"  
-	# "mpi4py py314 mpi none"	
-	# "numba py312 python none"
-	# "pyomp py312 python none"	
-	# "numpy py314 python viztracer"
-	# "threads py314t python viztracer"
-	# "threads py314 python viztracer"
+	"mp-map py314 python viztracer"
+	"mp-imap py314 python viztracer"
+	"mp-imap-unordered py314 python viztracer"  
+	"mpi4py py314 mpi none"	
+	"numba py312 python none" 
+	"pyomp py312 python none"	
+	"numpy py314 python viztracer"
+	"threads py314t python viztracer"
+	"threads py314 python viztracer"
 )
 
 profile=1 # 0 false --> performance experiment, 1 true --> profiling experiment
